@@ -1,0 +1,264 @@
+/* Readbook Component Styles */
+.readbook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* dark overlay */
+        url('/src/assets/images/back.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+}
+
+/* Readbook Header */
+.readbook-header {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0; 
+    background: linear-gradient(black, rgba(77, 161, 136, 0.21));
+    color: white;
+    text-decoration: underline;
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+.readbook-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    display: inline-block; 
+    padding-top: 1.5rem; 
+}
+
+/* Readbook Card Layout */
+.readbook-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* background: #ffffff; */
+    padding: 2rem;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 12px hsla(0, 0.00%, 0.00%, 0.91); */
+    max-width: 900px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 hsla(0, 0.00%, 2.70%, 0.97);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: white;
+}
+
+.readbook-img {
+    text-align: center;
+}
+
+.readbook-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.readbook-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: black;
+    
+   
+}
+
+.readbook-details {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.readbook-details-box > div > span{
+    font-size: 1.1rem;
+    margin-bottom: 14px;          
+    line-height: 1.5;
+    color: black;                   
+    font-weight: 600;   
+}
+
+/* New Book Details */
+.book-detail {
+    margin-top: 1rem;
+}
+
+.book-detail .label {
+    font-weight: bold;
+    /* color: #333; */
+}
+
+.book-detail .value {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* ISBN */
+.isbn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    color:black;
+    font-weight: bold;
+}
+
+.isbn .label {
+    font-size: 1.1rem;
+    color: #007bff;
+}
+
+/* Long Description Toggle */
+.longDescription {
+    margin-top: 1rem;
+    color:white;
+}
+.long-description-text {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: white; /* Set color to white for the long description text */
+    max-width: 600px;
+    display: none;
+}
+.longDescription .toggle-input {
+    display: none;
+}
+
+.short-description {
+    color:white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    /* background-color: #007bff; */
+    color:  #007bff;;
+    /* border-radius: 6px; */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: white;
+}
+
+/* Hide the long description by default */
+.long-description-text {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 600px;
+    display: none;
+}
+.back-btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    /* background-color: #007bff; */
+    color:  #007bff;;
+    /* border-radius: 6px; */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.back-btn:hover {
+    color: white;
+}
+
+/* Show long description when checkbox is checked */
+.toggle-input:checked ~ .long-description-text {
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .readbook-card {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        width: 90%;
+    }
+
+    .readbook-img img {
+        width: 250px;
+    }
+
+    .readbook-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .readbook-header h1 {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .readbook-card {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .readbook-img img {
+        width: 220px;
+    }
+
+    .readbook-details-box > div > span {
+        font-size: 1rem;
+    }
+
+    .read-more-btn {
+        padding: 6px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .readbook-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .readbook-card {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .readbook-img img {
+        width: 180px;
+    }
+
+    .readbook-details {
+        align-items: center;
+    }
+
+    .readbook-details-box > div > span {
+        font-size: 0.95rem;
+    }
+
+    .read-more-btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}

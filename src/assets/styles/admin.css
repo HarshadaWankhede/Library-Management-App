@@ -1,0 +1,28 @@
+.admin-span {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .admin-span {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  .admin-span {
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (min-width: 1101px) {
+  .admin-span {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,163 @@
+.adduser {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/src/assets/images/back.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+
+  .adduser-header {
+    width: 100%;
+    text-align: center;
+    /* padding: 1vh 0; */
+    background: linear-gradient(black, rgba(77, 161, 136, 0.21));
+    color: white;
+    text-decoration: underline;
+    position: sticky;
+    top: 0; /* better for mobile visibility */
+    z-index: 1;
+    margin-top: 2vh;
+    /* font-size: 1.5rem; */
+  }
+
+  .adduser-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    .adduser-form-box {
+      width: 100%;
+      max-width: 700px;
+      padding: 2rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+
+        input {
+          padding: 0.75rem;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          font-size: 1rem;
+          background: rgba(255, 255, 255, 0.15);
+
+          &::placeholder {
+            color: black;
+            opacity: 1;
+          }
+        }
+
+        button {
+          grid-column: span 2;
+          padding: 0.75rem;
+          background-color: black;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ✅ Mobile Devices (phones) */
+@media (max-width: 600px) {
+  .adduser {
+    padding: 1vh;
+
+    .adduser-header {
+      font-size: 1.2rem;
+      /* padding: 0.25rem 0; */
+    }
+
+    .adduser-container {
+      padding: 1rem;
+
+      .adduser-form-box {
+        padding: 1rem;
+
+        form {
+          grid-template-columns: 1fr;
+
+          button {
+            grid-column: span 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ✅ Tablets (portrait & landscape) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .adduser {
+    padding: 2vh;
+
+    .adduser-header {
+      font-size: 1.4rem;
+      margin-top: 3vh;
+    }
+
+    .adduser-container {
+      padding: 1.5rem;
+
+      .adduser-form-box {
+        padding: 1.5rem;
+        max-width: 90%;
+
+        form {
+          grid-template-columns: 1fr 1fr;
+
+          input {
+            font-size: 1rem;
+          }
+
+          button {
+            font-size: 1rem;
+            padding: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ✅ Laptops and Desktops */
+@media (min-width: 1025px) {
+  .adduser {
+    .adduser-header {
+      font-size: 1.5rem;
+    }
+
+    .adduser-container {
+      .adduser-form-box {
+        max-width: 700px;
+        form {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
