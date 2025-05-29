@@ -1,12 +1,31 @@
-# React + Vite
+# Library Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Library Management Application built using **React.js** that supports both Admin and User portals with distinct functionalities.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Admin Portal
+- View all books.
+- Read detailed information about each book.
+- Add new books to the library.
+- Delete existing books.
+- View user details.
+- Add new users.
+- Delete existing users.
 
-## Expanding the ESLint configuration
+* User Portal
+- Browse and read books.
+- Add books to the cart after reading.
+- Remove books from the cart.
+- View user details (read-only; no delete permissions).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Technologies Used
+
+- React.js
+- React Router for navigation
+- JSON data file (`booksdata.json`) as a simple mock backend
+- CSS for styling and responsive design
+
+
+
